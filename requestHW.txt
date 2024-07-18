@@ -1,0 +1,66 @@
+use Academy
+
+SELECT * FROM Faculties
+ORDER BY Id desc
+
+GO
+
+SELECT Name,Rating FROM Groups
+
+GO
+
+SELECT Surname,Salary,Premium, (Salary + Premium) AS 'sum Salary+Premium' FROM Teachers
+
+GO
+
+SELECT Name, Dean From Faculties
+
+GO
+
+SELECT Surname,Salary FROM Teachers WHERE IsProfessor=1 AND Salary>1050
+
+GO
+
+SELECT Name,Financing FROM Departments WHERE Financing<11000 or Financing>15000
+
+GO
+
+Select Name FROM Departments Where Name !='Computer Science'
+
+GO
+
+SELECT Surname,Position FROM Teachers WHERE IsProfessor=0
+
+GO
+
+SELECT Surname,Position,Salary,Premium From Teachers 
+WHERE Premium BETWEEN 160 and 650
+
+GO
+
+SELECT Surname,Salary,Position FROM Teachers Where IsAssistant=1
+
+GO
+
+SELECT Surname,Position,EmploymentDate from Teachers
+where EmploymentDate <'01.01.2000'
+
+GO
+
+SELECT Name As 'Name of Department' FROM Departments
+Where Name < 'Software Development'
+ORDER BY Name
+
+GO
+
+SELECT Surname,Position,Salary+Premium from Teachers
+WHERE isAssistant=1 and (Salary+Premium) <= 1200
+order by Surname
+
+GO
+
+SELECT Name FROM Groups
+Where Year=5 and Rating BETWEEN 2 and 4
+
+SELECT Surname,Salary,Premium FROM Teachers
+WHERE IsAssistant=1 and Salary<550 or Premium<200
